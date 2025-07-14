@@ -66,6 +66,9 @@ Route::middleware('auth')->group(function () {
         ->name('password.confirm');
 });
 
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('email/verify/{id}/{hash}', EmailVerificationController::class)
         ->middleware('signed')
@@ -77,10 +80,6 @@ Route::middleware('auth')->group(function () {
     Route::get('vote/{id}', VoteNow::class)->name('vote');
     Route::get('/my-elections', LivewireDashboard::class)->name('my-elections');
 });
-
-
-
-
 
 
 Route::get('dashboard', Dashboard::class)->name('dashboard');

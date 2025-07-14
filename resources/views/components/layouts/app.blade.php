@@ -47,10 +47,11 @@
                     </li>
                    
                     <li class="py-3 px-4 text-red-500 flex">
-                        <form action="{{ route('logout') }}" method="post">
+                        <a href="/">Logout</a>
+                        {{-- <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="button">Logout</button>
-                        </form>
+                        </form> --}}
                     </li>
                     
                 </ul>

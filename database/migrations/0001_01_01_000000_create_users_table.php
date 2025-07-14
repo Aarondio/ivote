@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('vin')->unique()->nullable();
-            $table->string('phone')->unique()->default();
+            $table->string('phone')->nullable();
             $table->foreignIdFor(Department::class)->nullable();
             $table->foreignIdFor(Faculty::class)->nullable();
             $table->string('photo')->nullable();
